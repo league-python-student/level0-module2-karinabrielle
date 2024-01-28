@@ -11,3 +11,15 @@ if __name__ == '__main__':
     # TODO 2) Display the selected numbers to the user in a pop-up
 
     # TODO 3) BONUS: Set the title of the pop-up to show it is a lottery ticket
+
+
+
+    num = random.randint(1, 60)
+
+    messagebox.showinfo(message="You will get a lottery ticket with some numbers on it. Here is your lottery ticket, and good luck!")
+
+
+
+
+
+
