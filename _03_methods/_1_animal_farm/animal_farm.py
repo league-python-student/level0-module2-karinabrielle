@@ -1,7 +1,7 @@
 import tkinter as tk
-from tkinter import simpledialog, Tk
+from tkinter import simpledialog, Tk, messagebox
 from PIL import Image, ImageTk
-from playsound import playsound
+# from playsound import playsound
 
 window = None
 
@@ -17,6 +17,22 @@ def animals():
     # TODO 2. Make it so that the user can keep entering new animals.
 
     # TODO 3. If the user enters 'exit', stop the program
+
+    messagebox.showinfo(message="We have an animal farm and you will be able to see some animals! :)")
+    messagebox.showinfo(message="Type in a the animal you want to see, and the options are a cat, dog, cow, duck, llama, and a scary guard dog :P.")
+    messagebox.showinfo(message="For example, if I want to see a cat, I just type in the word cat")
+    animal = simpledialog.askstring(title="THE FARM", prompt="Type in your animal you want to see. If you want to leave the animal farm, just type in the word exit.")
+
+    if animal == "cat":
+        show_image("cat.jpg")
+    if animal == "dog":
+        show_image("dog.jpg")
+    if animal == "cow":
+        show_image("cow.jpg")
+    if animal == "duck":
+        show_image("duck.jpg")
+    if animal == "llama":
+        show_image("llama.jpg")
 
 
 # ======================= DO NOT EDIT THE CODE BELOW =========================
