@@ -1,3 +1,4 @@
+import sys
 import tkinter as tk
 from tkinter import simpledialog, Tk, messagebox
 from PIL import Image, ImageTk
@@ -19,7 +20,7 @@ def animals():
     # TODO 3. If the user enters 'exit', stop the program
 
     messagebox.showinfo(message="We have an animal farm and you will be able to see some animals! :)")
-    messagebox.showinfo(message="Type in a the animal you want to see, and the options are a cat, dog, cow, duck, llama, and a scary guard dog :P.")
+    messagebox.showinfo(message="Type in a the animal you want to see, and the options are a cat, dog, cow, duck, llama, bunny, and a scary guard dog :P.")
     messagebox.showinfo(message="For example, if I want to see a cat, I just type in the word cat")
     animal = simpledialog.askstring(title="THE FARM", prompt="Type in your animal you want to see. If you want to leave the animal farm, just type in the word exit.")
 
@@ -33,8 +34,12 @@ def animals():
         show_image("duck.jpg")
     if animal == "llama":
         show_image("llama.jpg")
-
-
+    if animal == "scary guard dog":
+        show_image("scary_guard_dog.jpg")
+    if animal == "bunny":
+        show_image("bunny.jpg")
+    if animal == "exit":
+        sys.exit(0)
 # ======================= DO NOT EDIT THE CODE BELOW =========================
 
 def show_image(filename=None):

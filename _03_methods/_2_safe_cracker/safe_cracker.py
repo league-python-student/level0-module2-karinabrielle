@@ -1,18 +1,27 @@
 import random
 import sys
-from tkinter import messagebox, Tk
-from playsound import playsound
+from tkinter import messagebox, Tk, simpledialog
 
+
+# from playsound import playsound
+
+wekncrzpasfdkjhcfjse = random.randint(0, 999)
 
 def crack_the_safe():
-    pass
+    for answer in range (9999999999999):
+        answer = simpledialog.askstring(title="safe", prompt="Type in a code to open a safe")
+        if answer == 999999 :
+            messagebox.showinfo(message="CONGRATULATIONS!!! You have cracked open the safe! Click okay to exit the program.")
+            messagebox.showinfo(message="leaving the program now...")
+            sys.exit(0)
+
     # TODO: Your mission: Use the try_code method to crack the safe
     #  by trying all possible combinations
 
+    # guess = simpledialog.askstring(title="safe", prompt="Type in a code to open a safe")
 
-# ======================= DO NOT EDIT THE CODE BELOW =========================
+    # ======================= DO NOT EDIT THE CODE BELOW =========================
 
-wekncrzpasfdkjhcfjse = random.randint(0, 999)
 
 
 def try_code(guess):
@@ -22,14 +31,12 @@ def try_code(guess):
 
     if guess == secret_code:
         messagebox.showinfo(None, "Congratulations! You cracked the safe with " + str(guess))
-        play_the_sound_of_success()
+        #  play_the_sound_of_success()
         sys.exit(0)
 
 
-def play_the_sound_of_success():
-    playsound('me-gusta.wav')
-
-
+# def play_the_sound_of_success():
+    #  playsound('me-gusta.wav')
 if __name__ == '__main__':
     window = Tk()
     window.withdraw()
