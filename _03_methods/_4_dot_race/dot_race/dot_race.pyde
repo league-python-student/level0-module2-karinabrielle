@@ -13,14 +13,14 @@ def setup():
     global x
 
     # 1. Set the variable named x to 50.
-
+    x = 50
 def draw():
     background(200, 200, 200)
     global x
     
     # 2. Draw an ellipse of height and width 50. Make sure to use the x variable
     # for its X position. Pick a y value that places it half way down the window.
-    
+    ellipse(50, 50, 50, 50)
     # 3. Fill in the ellipse with a nice color. Remember to put it above the code
     # where you draw the ellipse.
     
@@ -47,3 +47,4 @@ def play_sound():
     fill(0)
     textSize(36)
     text("WINNER!!", width/2, height/2)
+    

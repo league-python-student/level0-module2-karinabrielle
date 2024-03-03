@@ -7,14 +7,21 @@ from tkinter import messagebox, Tk, simpledialog
 
 wekncrzpasfdkjhcfjse = random.randint(0, 999)
 
+messagebox.showinfo(message="Welcome to the Crack Open The Safe Simulator!")
+messagebox.showinfo(message="Obviously, your objective is to try to crack open a safe, and your answer has to have a total of 6 digits.")
+messagebox.showinfo(message="Good luck!!!")
 def crack_the_safe():
-    for answer in range (9999999999999):
+    for answer in range(999999999999999999999999):
         answer = simpledialog.askstring(title="safe", prompt="Type in a code to open a safe")
-        if answer == 999999 :
+        answer2 = int(answer)
+        if answer2 < 100000 :
+            messagebox.showinfo(message="Your answer has to have a total of 6 digits...")
+        if answer2 > 999999 :
+            messagebox.showinfo(message="Your answer has to only have 6 digits...")
+        if answer2 == 999999:
             messagebox.showinfo(message="CONGRATULATIONS!!! You have cracked open the safe! Click okay to exit the program.")
             messagebox.showinfo(message="leaving the program now...")
             sys.exit(0)
-
     # TODO: Your mission: Use the try_code method to crack the safe
     #  by trying all possible combinations
 
