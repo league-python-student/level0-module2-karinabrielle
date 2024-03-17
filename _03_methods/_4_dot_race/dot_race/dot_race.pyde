@@ -28,25 +28,26 @@ def draw():
     
     # 4. If the mouse is pressed change the x value so that the dot moves to the right
     if mousePressed:
-        x+=10
+        x+=5
     # 5. If your dot moves slowly, make it move faster. If it moves too quickly,
     # slow it down (you have to figure out what part of your code to change)
-    if x == 775:
-        messagebox.showinfo(title="", message="Congratulations! You have ran across the finish line!")
+    if x > 775:
+        play_sound()
     # 6. Use an if statement to play a sound (ding) when your dot crosses the finish
     # line (right side of window). A playSound() method is provided (you have to
     # uncomment the code at the bottom of this program to get this to work)
     
 
+global sound_played
 sound_played = False
 def play_sound():
-  
+    global sound_played 
     if can_play_sounds:
-        if !sound_played:
-            #Minim minim = new Minim(this)
-            #AudioSample sound = minim.loadSample("ding.wav")
-            #sound.trigger()
-            #soundPlayed = true
+        if not sound_played:
+            minim = Minim()
+            sound = minim.loadSample("ding.wav")
+            sound.trigger()
+            sound_played = true
             pass
     fill(0)
     textSize(36)
