@@ -17,7 +17,7 @@ def setup():
         
     # Use the add_sprinkle() function provided to add some sprinkles to your
     # ice cream.
-    add_sprinkle(15)
+    
     # Write code to add a cherry to the top of your ice cream. Hint: ellipse
     fill(1000, 0, 0)
     ellipse(250, 50, 50, 50)

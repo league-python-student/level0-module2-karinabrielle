@@ -4,16 +4,22 @@ import math
  
 # 1. Create three variables to represent the x, y, and
 # size of the ellipse
-              
+
+global x = 275
+size2=50
+
 def setup():
     # 2. Set the size of your sketch using the size function
     # size(width, height)
     
-    pass
+    size(600,600)
+    
      
 def draw():
     # 3. Set the background color of your sketch
-
+    background(509, 191, 358)
+    
+    ellipse(x,x,int(size2),int(size2))
     # 4. Draw an ellipse using the variables created at the top
     # of the sketch for the location and size of your ellipse. 
     # Make sure it fits in the window. Change the variables
@@ -39,8 +45,8 @@ def mousePressed():
     # x AND y for the ellipse, for a new random location on the window
     # Hint: Use code like this, x = random(width)
 
-    
-# ========  This function gives you the number of pixels between =========
+# ==================== DO NOT EDIT THIS CODE BELOW =======================
+# ========= This function gives you the number of pixels between =========
 #                    between the mouse and the x,y point 
 def get_distance_from_mouse(x, y):
     return math.sqrt(math.pow((mouseX-x),2) + math.pow((mouseY-y),2))
